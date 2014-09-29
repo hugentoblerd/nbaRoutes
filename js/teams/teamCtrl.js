@@ -20,16 +20,16 @@ app.controller('teamCtrl', function($scope, $routeParams, teamService, teamData)
   switch ($routeParams.team) {
     case 'losangeleslakers':
     $scope.homeTeam = 'Los Angeles Lakers';
-    $scope.logoPath = 'images/laker-logo.png';
-    [break;]
+    $scope.logoPath = 'images/lakers-logo.png';
+    break;
     case 'miamiheat': 
     $scope.homeTeam = 'Miami Heat';
     $scope.logoPath = 'images/heat-logo.png';
-    [break;]
+    break;
     case 'utahjazz': 
     $scope.homeTeam = 'Utah Jazz';
     $scope.logoPath = 'images/jazz-logo.png';
-    [break;]
+    break;
   };
 
   // gives newGame object a property of home team and sets it equal to stripped down hometown property(it's a string variable)
@@ -40,14 +40,13 @@ app.controller('teamCtrl', function($scope, $routeParams, teamService, teamData)
       // returns new data from the Parse db
       .then(function () {
         teamService.getTeamData($scope.newGame.homeTeam)
-          .then(function (res) {
-            $scope.teamData = res;
+          .then(function (data) {
+            $scope.teamData = data;
             $scope.newGame = {};
             $scope.showNewGameForm = false;
           });
       });
   };
-
 
 
 
