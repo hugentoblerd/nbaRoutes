@@ -45,7 +45,7 @@ app.service('teamService', function($http, $q){
       results.wins = wins;
       results.losses = losses;
       // resolves the deferred object with results array
-      deferred.resolve(resolve);
+      deferred.resolve(results);
     });
     // returns the deferred promise object
     return deferred.promise;

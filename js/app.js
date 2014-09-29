@@ -12,13 +12,13 @@ $routeProvider
     controller: 'teamCtrl',
     // resolves promise from teamServices getTeamData (GET request). The data from that promis is now available in our controller as teamData
     resolve: {
-      teamData: function (teamService) {
+      teamData: function (teamService, $route) {
         return teamService.getTeamData($route.current.params.team);
-      };
-    };
+      }
+    }
   }).otherwise('/', {
-    templateUrl: 'js/home.homeTmple.html',
-    controller: 'homeCtrl'
+    redirectTo: '/'
+  });
 
 
 
