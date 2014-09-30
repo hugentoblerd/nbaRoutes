@@ -42,7 +42,22 @@ html, body {
   margin: 10px auto;
 }
 
+.logo.third {
+  width: 30%;
+  float: left;
+}
+
+.logo.third img {
+  width: 300px;
+  display: block;
+  margin: 10px auto;
+}
+
 .record h1 {
+  text-align: center;
+}
+
+.record h4 {
   text-align: center;
 }
 
