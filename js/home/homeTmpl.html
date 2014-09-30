@@ -2,8 +2,8 @@
   <div class="logo third" ng-repeat="num in loopNum">
     <img ng-src="{{home.logoPath[num]}}">
     <div class="record">
-     <h4> <strong>{{home.homeTeam[num]}}</strong></h4>
-     <h4> <strong> Wins: {{teamData[num].wins}} Losses: {{teamData[num].losses}}</strong></h4>
+     <h4><strong>{{home.homeTeam[num]}}</strong></h4>
+     <h4><strong> Wins: {{teamData[num].wins}} Losses: {{teamData[num].losses}}</strong></h4>
     </div>
     <div class="team-data">
       <div class="game" ng-repeat="game in teamData[num]" ng-class="{'even' : $index % 2 === 0}">
